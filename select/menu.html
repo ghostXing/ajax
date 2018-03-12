@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .all {
+            margin-top: 30px;
+        }
+        .xh {
+            float: left;
+            margin-right: 20px;
+            color: red;
+            font-style: italic;
+            font-size: 30px;
+        }
+        #menu {
+            width: 500px;
+        }
+    </style>
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="template.js"></script>
+    <script id="art" type="text/html">
+        {{if data}}
+          {{ each data as value}}
+             <div class="all">
+                 <h2>{{value.title}}</h2>
+                 <p class="intro">菜系简介:{{value.imtro}}</p>
+                 {{each value.albums as ele}}
+                    <img src={{ele}}>
+                 {{/each}}
+                 <p class="zl">{{value.ingredients}}</p>
+                 <p class="fl">{{value.burden}}</p>
+                 {{each value.steps as step}}
+                 <div class="steps">
+                     <div class="c">
+                          <p>{{step.step}}</p>
+                         <p><img src={{step.img}}></p>
+                      </div>
+                 </div>
+                 {{/each}}
+             </div>
+          {{/each}}
+        {{/if}}
+    </script>
+    <script>
+        //1 从服务器获取数据
+        //2 解析从服务器获取的数据
+        // <div class="all">
+        //      <h2>橙汁双椒鸡柳</h2>
+        //      <p class="intro"></p>
+        //      <img src=">
+        //      <p class="zl"></p>
+        //      <p class="fl"></p>
+        //  <div class="steps">
+        //     <div class="c">
+        //         <p></p>
+        //         <p><img></p>
+        //      </div>
+        // </div>
+        //</div>
+
+
+        //http://apis.juhe.cn/cook/query?key=3e1dcd706f3f21875c6d7c5035351d75&rn=3&pn=0&dtype=jsonp&callback=handle&menu=%E8%A5%BF%E7%BA%A2%E6%9F%BF
+
+        //给搜索按钮注册事件
+        $(function () {
+            $("#btnSearch").click(function () {
+                var txt = $("#txtSearch").val();
+                var url = "http://apis.juhe.cn/cook/query?key=6c48e5c1df906801124d5e92e41416ee&rn=3&pn=0&menu="+ txt;
+                queryMenu(url);
+            })
+            function queryMenu(url) {
+                $("#menu").text("正在加载中,请等待");
+                $.ajax({
+                    type:"get",
+                    url:url,
+                    async:true,
+                    dataType:"jsonp",
+                    success: function (data) {
+                        $("#menu").text("");
+                        if(data.error_code == 0) {
+                            var html = template("art",data.result);
+                            $("#menu").html(html);
+                        }
+                    },
+                    error: function () {
+                        $("#menu").text("对不起，出现了错误")
+                    }
+                })
+            }
+        })
+
+
+    </script>
+</head>
+<body>
+<input type="text"  id="txtSearch"> <input type="button" value="搜索" id="btnSearch">
+
+<div id="menu">
+
+</div>
+</body>
+</html>

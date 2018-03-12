@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+                var xhr = null;
+                if(window.XMLHttpRequest) {
+                    xhr = new XMLHttpRequest();
+                } else {
+                    xhr = new ActiveXObjec("Microsoft.XMLHTTP");
+                }
+                xhr.open("get","json.json",true);
+                xhr.send(null);
+                xhr.onreadystatechange = function () {
+                    if(xhr.readyState == 4 && xhr.status == 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var tag = "";
+                        var total = data.total;
+                        console.log(total);
+                        var books = data.books;
+                        // console.log(books);
+                        for( var i = 0; i < total; i++) {
+                             var name = books[i].name;
+                             console.log(name);
+                             var category = books[i].category;
+                             var details = books[i].details;
+                             tag +="<tr><td>"+name+"</td><td>"+category
+                                 +"</td> <td>"
+                                 +details
+                                 +"</td></tr>";
+                             console.log(tag);
+                        }
+                        var table = document.createElement("table");
+                        table.innerHTML = tag;
+                        var show = document.getElementById("show");
+                        // show.innerHTML = tag;
+                        show.appendChild(table);
+                    }
+                        // console.log(tag);
+
+                        // function getText(obj) {
+                        //     if(obj.nodeType == 1 ) {
+                        //         return obj.textContent;
+                        //     } else {
+                        //         return obj.innerText;
+                        //     }
+                        // }
+                };
+
+            };
+        };
+    </script>
+</head>
+<body>
+<input type="button" value="获取" id="btn">
+<div id="show"></div>
+
+</body>
+</html>

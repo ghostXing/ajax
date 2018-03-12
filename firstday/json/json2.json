@@ -1,0 +1,20 @@
+{
+  "total": "4",
+  "books": [
+    {
+      "name": "水浒传",
+      "category": "小说",
+      "details": "some people play details"
+    },
+    {
+      "name": "三国演义",
+      "category": "小说",
+      "details": "three countries details"
+    },
+    {
+      "name": "我是谁",
+      "category": "小说",
+      "details": "someone dont know details"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+          var btn = document.getElementById("btn");
+          btn.onclick = function () {
+            var xhr = null;
+            if(window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                xhr = new ActiveXObjec("Microsoft.XMLHTTP");
+            }
+            xhr.open("get","data.xml",true);
+            xhr.send(null);
+            xhr.onreadystatechange = function () {
+              if(xhr.readyState == 4 && xhr.status == 200) {
+                  var data = xhr.responseXML;
+                  var bookstore = data.getElementsByTagName("bookstore")[0];
+                  console.log(bookstore);
+                  var books = bookstore.getElementsByTagName("book");
+                  var tag ="";
+                  for( var i = 0; i < books.length; i++) {
+                      var book = books[i];
+                      var name = book.getElementsByTagName("name")[0];
+                      var category = book.getElementsByTagName("category")[0];
+                      var desc = book.getElementsByTagName("desc")[0];
+                       console.log(desc.textContent);
+                      tag +=  "<table><tr><td>"+getText(name)
+                          +"</td> <td>"+getText(category)
+                          +"</td> <td>"+getText(desc)
+                          +"</td></tr></table>"
+                  }
+                  // console.log(tag);
+                  var tbody = document.createElement("tbody");
+                  tbody.innerHTML = tag;
+                  var show = document.getElementById("show");
+                  // show.innerHTML = tag;
+                  show.appendChild(tbody);
+                  function getText(obj) {
+                      if(obj.nodeType == 1 ) {
+                          return obj.textContent;
+                      } else {
+                          return obj.innerText;
+                      }
+                  }
+              }
+            };
+          };
+        };
+    </script>
+</head>
+<body>
+<input type="button" value="获取" id="btn">
+<div id="show"></div>
+
+</body>
+</html>

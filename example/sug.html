@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMS-jquery查询</title>
+    <style type="text/css">
+        #sug{
+            position: absolute;
+            left: 50%;
+            margin-left: -150px;
+            width: 300px;
+            background: lightGreen;
+            height: 40px;
+            text-align: center;
+        }
+        #sug input{
+            margin-top: 10px;
+        }
+        #list{
+            position: absolute;
+            left: 50%;
+            top:50px;
+            width: 200px;
+            margin-left: -150px;
+            height: auto;
+            background: lightBlue;
+            display: none;
+        }
+        #list ul{
+            padding-left: 0px;
+            margin: 0px;
+        }
+        #list ul li{
+            background: lightGray;
+            line-height: 30px;
+            list-style: none;
+            padding-left: 10px;
+            margin-top: 0px;
+            cursor: pointer;
+        }
+        #list ul li.on{
+            background: lightGreen;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div id="sug">
+    <div>
+        <input type="text" id="keyWord" autocomplete=off>
+        <input type="button" value="百度一下" id="btn">
+    </div>
+</div>
+<div id="list">
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#keyWord").keyup(function () {
+            var kw = $(this).val();
+            // console.log(kw);
+            var url ="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+kw;
+            sugQuery(url);
+        })
+        function sugQuery(url) {
+            $.ajax({
+                type:"get",
+                url:url,
+                async:true,
+                dataType:"jsonp",
+                jsonp:"cb",
+                jsonpCallback:"callback",
+                success:function (data) {
+                    $("#list").html("");
+                    var ul = $("<ul></ul>");
+                    $.each(data.s,function (index,ele) {
+                       var tag = $("<li></li>").append(ele);
+                        ul.append(tag);
+                    })
+                    $("#list").append(ul).show();
+                },
+                error:function () {
+
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>

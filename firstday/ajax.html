@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form  id="form">
+    <div id="show"></div>
+    <label for="user">用户名</label><input type="text" id="user">
+    <label for="password">密码</label><input type="password" id="password">
+    <input type="button" value="提交" id="btn">
+</form>
+</body>
+</html>
+<script>
+    window.onload = function () {
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            var userName = document.getElementById("user").value;
+            var passWord = document.getElementById("password").value;
+            var xml = null;
+            //
+            if(window.XMLHttpRequest) {
+                xml = new XMLHttpRequest();
+            }  else {
+                xml = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+          var url = "today.php?username="+userName+"&password="+passWord;
+          xml.open("post",url,true);
+          xml.onreadystatechange = function () {
+                if(xml.readyState == 4) {
+                    if(xml.status == 200) {
+                        // console.log(userName);
+                        // console.log(passWord);
+                        var data = xml.responseText;
+                        console.log(1);
+                        if(data == 1) {
+                            document.getElementById("show").innerHTML = "登录成功";
+                        } else {
+                            document.getElementById("show").innerHTML = "登录失败";
+                        }
+                    }
+                }
+          };
+          xml.send(null);
+          // console.log(2);
+        };
+
+    };
+</script>

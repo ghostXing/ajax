@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMS</title>
+    <style type="text/css">
+        #ems{
+            position: absolute;
+            left: 50%;
+            width: 400px;
+            height: auto;
+            margin-left: -200px;
+            background: lightGreen;
+            text-align: center;
+            min-height: 50px;
+            height: 500px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        #ems input{
+            height: 25px;
+            margin-top: 10px;
+        }
+        #list{
+            background: lightBlue;
+        }
+        #list li{
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body>
+<div id="ems">
+    <div>
+        <input type="text" id="code">
+        <input type="button" value="查询" id="btn">
+    </div>
+    <div id="list">
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = function(){
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            var code = document.getElementById('code').value;
+            var xhr = null;
+            try {
+                xhr = new ActiveXObject('Microsoft.XMLHTTP');
+            }catch(e){
+                console.log(123);
+                xhr = new XMLHttpRequest();
+            }
+            console.log(xhr);
+            xhr.open('get','transport.php?code='+code,false);
+
+            xhr.send(null);
+
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status ==200) {
+                    var data = JSON.parse(xhr.responseText);
+                    // console.log(data);
+                    if(data.status == 0) {
+                        var context = data.data.info.context;
+                        // console.log(context);
+                        var tag = "";
+                        for( var i = 0; i < context.length; i++) {
+                            var list = context[i];
+                            var time = list.time;
+                             console.log(time);
+                            var desc = list.desc;
+                            var t = new Date();
+                            t.setTime(time+"000");
+                            // console.log(t.getFullYear());
+                            //console.log(desc);
+                            tag +="<li><div>"+t.getFullYear()+"年"+(t.getMonth()+1)+"月"+t.getDate()+"日"+"星期"+(t.getDay()+1)+" "+t.getHours()+"时"+t.getMinutes()+"分"+t.getSeconds()+"秒"+"</div></li><li><div>"+desc+"</div></li>";
+                        }
+                        var ul = document.createElement("ul");
+                        ul.innerHTML = tag;
+                        var list = document.getElementById("list");
+                            list.appendChild(ul);
+                    } else {
+                        var list = document.getElementById("list");
+                        list.innerHTML = data.msg;
+                    }
+                }
+
+
+
+
+            }
+
+            //这里的代码依然执行
+
+
+
+
+
+        }
+    }
+
+</script>
+</body>
+</html>

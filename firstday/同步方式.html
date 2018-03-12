@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="show"></div>
+<form action="samestep.php" method="post">
+    用户名: <input type="text" name="username">
+    密码: <input type="password" name="password">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
+<script>
+    window.onload = function () {
+        var show = document.getElementById("show");
+        var data = window.location.search;
+        var dataStr = data.split("=");
+        var flag = dataStr[1];
+        if(flag == 1) {
+            show.innerHTML = "登录成功";
+        } else {
+            show.innerHTML = "登录失败";
+        }
+    };
+
+</script>

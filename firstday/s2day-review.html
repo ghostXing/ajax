@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+          var btn = document.getElementById("btn");
+          btn.onclick = function () {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            console.log(username);
+            var xhr = null;
+            if(window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            // var url = "second.php?username="+username+"&password="+password;
+            var url = "second.php";
+            // xhr.open("get",url,true);
+            xhr.open("post",url);
+            // xhr.send(null);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            var param = "username="+username+"&password="+password;
+            console.log(param);
+            xhr.send(param);
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState == 4) {
+                    if(xhr.status ==200) {
+                        var data = xhr.responseText ;
+                        console.log(data);
+                        // if(data == 1) {
+                        //     document.getElementById("show").innerHTML = "登录成功";
+                        // } else {
+                        //     document.getElementById("show").innerHTML = "登录失败";
+                        // }
+                    }
+                }
+            };
+
+          };
+        };
+    </script>
+</head>
+<body>
+<form>
+    <div id="show"></div>
+    用户名: <input type="text" name="username" id="username"><br/>
+    密码: <input type="password" name="password" id="password"><br>
+    <input type="button" id="btn" value="提交">
+</form>
+</body>
+</html>

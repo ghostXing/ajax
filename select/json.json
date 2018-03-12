@@ -1,0 +1,175 @@
+{
+  "resultcode": "200",
+  "reason": "Success",
+  "result": {
+    "data": [
+      {
+        "id": "2",
+        "title": "辣椒炒肉",
+        "tags": "家常菜;10分钟内;炒;孕妇;青少年;老人;白领;晚餐;香辣;营养;增强抵抗力;全菜系;1-2人;待客菜;炒锅",
+        "imtro": "辣椒炒肉，是湘菜里的一道经典家常菜，每家每户都会做的一道菜，而且每家都有自己的做法和绝招，呵呵。记得有次再朋友家里吃过这道菜，非常简单的做法，几乎没用啥特别的调料，味道却出奇的好，赶紧偷学了，回来做做，果然可以。电视里说烹饪协会定了湘菜的标准，辣椒炒肉辣椒和肉的比例要3:5，不知道这个规矩对不对，如果中餐都像西餐一样，都进行量化了，那么，是好事还是坏事呢，嘿嘿。那天看到番茄果说到辣椒炒肉，令我记忆起这道菜，于是花了8块钱买了半斤五花肉，还有1块钱的辣椒，一道不算贵又好吃的辣椒炒肉就出炉了。",
+        "ingredients": "五花肉,250g;尖椒,200g;青蒜,1个",
+        "burden": "生抽,适量;盐,适量;鸡精,适量",
+        "albums": [
+          "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/t\/0\/2_124913.jpg"
+        ],
+        "steps": [
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_034cf1bf3ae43bb6.jpg",
+            "step": "1.五花肉半斤洗净。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_6965df21425ff1f0.jpg",
+            "step": "2.将五花肉切片，用生抽将肉腌制一会儿。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_a7d5594b31fe3d5b.jpg",
+            "step": "3.准备好辣椒并洗净。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_28605064fce1d738.jpg",
+            "step": "4.将尖椒和青蒜切段。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_d68ee0e759797db0.jpg",
+            "step": "5.起油锅，下五花肉煸香并出出油。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_cfba88bbeae96778.jpg",
+            "step": "6.待五花肉八成熟时盛起待用。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_44ee8282fef4263c.jpg",
+            "step": "7.将辣椒，青蒜入锅煸炒。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_c4f00390cb4dc668.jpg",
+            "step": "8.等到辣椒炒至表皮有点快糊的时候，下肉一起炒匀。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_463887fd74a5a4ff.jpg",
+            "step": "9.待猪肉熟透后，加入盐、鸡精调味，就可以出锅了。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/2_2f99cbde26a81694.jpg",
+            "step": "10.好吃的辣椒炒肉，大家尝尝。"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "农家小炒肉",
+        "tags": "家常菜;辣;10分钟内;炒;下酒菜;下饭菜;全菜系;1-2人;炒锅",
+        "imtro": "对于冠有“农家”两个字的菜，在我认为，关键就是突出原汁原味的乡土气息，所以，重点不在刀工与形状，而在于主配料的齐全。农家小炒肉，说白了其实就是精华版的尖椒炒肉，但姜、蒜、辣椒不能省，正是由于多种配料的加入，才令爆香的味道十分惹人。",
+        "ingredients": "五花肉,500g",
+        "burden": "红椒,适量;尖椒,适量;青蒜,适量;蒜,适量;姜,适量;生抽,1大勺;剁椒,1大勺;鸡精,1\/2勺;油,适量",
+        "albums": [
+          "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/t\/0\/3_139793.jpg"
+        ],
+        "steps": [
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_304e397cc6ed0701.jpg",
+            "step": "1.五花肉洗净、切片，青红椒切块，青葱切段，蒜切片，姜切末；"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_293e9f6cf13a5b1d.jpg",
+            "step": "2.锅烧热，倒入少许油，油热后，放入姜蒜末爆香；"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_4e73297059d4fd8a.jpg",
+            "step": "3.倒入切片的五花肉；"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_73eb35cf5443b5c3.jpg",
+            "step": "4.翻炒至五花肉变色，加入青蒜；"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_7aa242fe22fc5e0f.jpg",
+            "step": "5.翻炒均匀，加入青红椒；"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_9a31789ebc25e549.jpg",
+            "step": "6.继续炒匀，加入剁椒；"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_42883e18a11e21a5.jpg",
+            "step": "7.加入生抽；"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/3_4cfb76967d70fd2d.jpg",
+            "step": "8.加入少许鸡精，翻炒均匀即可。"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "肉馅豆腐夹",
+        "tags": "家常菜;美容;通乳;增肥;痰湿质;骨质疏松;半小时-1小时;午餐;晚餐;冬季;止咳;下饭菜;补钙;咳嗽;3-4人;健脾;化痰;祛风散寒;祛寒;催乳;止咳化痰;下奶;健脾胃;锅子;其他味;其他工艺;助睡眠;小儿咳嗽;脾虚",
+        "imtro": "肉馅豆腐夹用猪肉、鸡蛋清、土豆等多种主料辅料做菜，真可谓荤素兼备，肉、菜、果俱全的集锦菜。猪肉、鸡蛋清含有丰富的动物性优质蛋白质和动物脂肪 菜品口感：多味道、多颜色、多营养。 　　豆腐：豆腐的蛋白质含量丰富，而且豆腐蛋白属完全蛋白，不仅含有人体必需的八种氨基酸，而且比例也接近人体需要，营养价值较高；有降低血脂，保护血管细胞，预防心血管疾病的作用。此外，豆腐对病后调养、减肥、细腻肌肤亦很有好处。 　　猪肉(瘦)：猪肉含有丰富的优质蛋白质和必需的脂肪酸，并提供血红素（有机铁）和促进铁吸收的半胱氨酸，能改善缺铁性贫血；具有补肾养血，滋阴润燥的功效；猪精肉相对其它部位的猪肉，其含有丰富优质蛋白，脂肪、胆固醇较少，一般人群均可适量食用。",
+        "ingredients": "豆腐,400g;猪肉,100g;土豆,1个",
+        "burden": "葱,10g;姜,5g;料酒,15ml;老抽,5ml;生抽,10ml;味精,2g;胡椒粉,1g;香油,10ml;色拉油,10ml;盐,2g;淀粉,5g;白糖,5g",
+        "albums": [
+          "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/t\/0\/8_834748.jpg"
+        ],
+        "steps": [
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_4a34d47052e21d10.jpg",
+            "step": "1.豆腐一块，用盐水浸泡10分钟。为了使豆腐容易成型。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_e561ad84f5779eaa.jpg",
+            "step": "2.猪肉洗净，切成小块。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_8fc67a8fef81f934.jpg",
+            "step": "3.葱、姜洗净。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_85fbe832118b4325.jpg",
+            "step": "4.把猪肉剁成碎末，葱、姜切碎。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_059d84fd0b98ca2c.jpg",
+            "step": "5.把豆腐切成每组两片，不要断开。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_be6cca7dcb62b31f.jpg",
+            "step": "6.肉馅中放入葱、姜末、料酒、老抽、生抽、盐、味精、胡椒粉、香油拌匀。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_fc1dce0c26d16101.jpg",
+            "step": "7.每两片豆腐中间放上一层肉馅，涂抹均匀。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_cc99f01f4e100577.jpg",
+            "step": "8.土豆去皮洗净，切成8毫米的薄片。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_2bc90b68ed56ea6a.jpg",
+            "step": "9.先把土豆片放入盘子里，再把豆腐肉夹均匀的放到土豆上面。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_9215786e9d89ce94.jpg",
+            "step": "10.锅里放足量的水，大火烧开，把豆腐肉夹放入锅中。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_ca496962e916a55b.jpg",
+            "step": "11.盖上锅盖，用大火蒸10分钟即可。关火取出来稍晾。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_faa352411801ac50.jpg",
+            "step": "12.锅里放少量油，把蒸豆腐的原汁倒入锅中，再放入老抽、生抽、白糖烧开后，用淀粉勾芡即可，出锅前放入香油调味即可。"
+          },
+          {
+            "img": "http:\/\/juheimg.oss-cn-hangzhou.aliyuncs.com\/cookbook\/s\/1\/8_8d335279b5c6703a.jpg",
+            "step": "13.把烧好的酱汁浇到豆腐上即可，就可以吃了。"
+          }
+        ]
+      }
+    ],
+    "totalNum": "11375",
+    "pn": "0",
+    "rn": "3"
+  },
+  "error_code": 0
+}
